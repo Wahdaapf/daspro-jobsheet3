@@ -7,7 +7,7 @@ public class Siakad25 {
         String nama, nim;
         char kelas;
         byte absen;
-        double nilaiKuis, nilaiTugas, nilaiUjian, nilaiAkhir;
+        double nilaiKuis, nilaiTugas, nilaiUTS, nilaiUAS, nilaiAkhir;
 
         System.out.print("Masukkan Nama\t\t: ");
         nama = sc.nextLine();
@@ -21,12 +21,14 @@ public class Siakad25 {
         nilaiKuis = sc.nextDouble();
         System.out.print("Masukkan Nilai Tugas\t: ");
         nilaiTugas = sc.nextDouble();
-        System.out.print("Masukkan Nilai Ujiant\t: ");
-        nilaiUjian = sc.nextDouble();
+        System.out.print("Masukkan Nilai UTS\t: ");
+        nilaiUTS = sc.nextDouble();
+        System.out.print("Masukkan Nilai UAS\t: ");
+        nilaiUAS = sc.nextDouble();
 
-        nilaiAkhir = (nilaiKuis + nilaiTugas + nilaiUjian) / 3;
+        nilaiAkhir = (nilaiKuis / 100 * 20) + (nilaiTugas / 100 * 15) + (nilaiUTS / 100 * 30) + (nilaiUAS / 100 * 35);
 
-        System.out.printf("Output:\nNama\t: %s\nNIM\t: %s\nKelas\t: %s\nAbsen\t: %s\nNilai Akhir\t: %s", nama, nim, kelas, absen, nilaiAkhir);
+        System.out.printf("\nOutput:\n\nNama\t\t: %s\nNIM\t\t: %s\nKelas\t\t: %s\nAbsen\t\t: %s\nNilai Akhir\t: %s", nama, nim, kelas, absen, nilaiAkhir);
 
     }
 }
