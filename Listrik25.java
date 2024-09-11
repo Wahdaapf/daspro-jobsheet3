@@ -10,11 +10,7 @@ public class Listrik25 {
         System.out.print("Masukkan Jumlah Listrik (kWh)\t\t: ");
         jumlahListrik = sc.nextInt();
 
-        if(jumlahListrik > 500) {
-            statusListrik = true;
-        } else {
-            statusListrik = false;
-        }
+        statusListrik = jumlahListrik > 500;
 
         totalHargaListrik = jumlahListrik * hargaListrik;
 
